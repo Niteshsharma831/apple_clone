@@ -1,0 +1,194 @@
+@charset "UTF-8";
+
+.mainConBody {
+	margin-top: 30px;
+}
+
+@media ( max-width : 768px) { /* For tablets and smaller screens */
+	h1 {
+		font-size: 40px;
+	}
+}
+
+@media ( max-width : 480px) { /* For mobile screens */
+	h1 {
+		font-size: 30px;
+	}
+}
+
+.image-container {
+	width: 100%;
+	height: 100vh;
+	position: relative;
+}
+
+.image-container img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.overlay-content {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	color: white;
+	text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Header and Paragraph Styling */
+.overlay-content h1 {
+	font-size: 3rem;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+.overlay-content p {
+	font-size: 1.5rem;
+	margin-bottom: 20px;
+}
+
+/* Button Styling */
+.btn-custom {
+	margin: 10px;
+	font-size: 1.2rem;
+	padding: 12px 25px;
+	border-radius: 50px;
+	transition: all 0.3s ease;
+}
+
+.btn-custom:hover {
+	transform: scale(1.05);
+}
+
+/* Footer Styling */
+.footer {
+	background-color: #222;
+	color: white;
+	text-align: center;
+	padding: 20px;
+	width: 100%;
+}
+
+/* Responsive Design */
+@media ( max-width : 768px) {
+	.overlay-content h1 {
+		font-size: 2rem;
+	}
+	.overlay-content p {
+		font-size: 1.2rem;
+	}
+	.btn-custom {
+		font-size: 1rem;
+		padding: 10px 20px;
+	}
+}
+/* Ensure all images inside the cards are the same size */
+.card-img {
+	width: 100%; /* Makes sure the image fills the width of the container */
+	height: 200px; /* You can adjust the height as needed */
+	object-fit: cover;
+	/* Ensures the image scales to cover the area without distortion */
+	display: block;
+	margin: 0;
+}
+
+.scrollable-container {
+	display: flex;
+	overflow-x: auto;
+	white-space: nowrap;
+	gap: 15px;
+	padding: 20px;
+	text-align: center;
+	justify-content: center;
+}
+
+.scrollable-container a {
+	flex: 0 0 auto;
+	text-decoration: none;
+	color: black;
+	margin-right: 10px;
+}
+
+.scrollable-container img {
+	max-width: 150px;
+	height: auto;
+	display: block;
+	margin: 10px auto;
+}
+
+.product {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+@media ( max-width : 768px) {
+	.latestAccesseries {
+		overflow-x: auto;
+		display: flex;
+		gap: 10px;
+	}
+	.latestAccesseries .card {
+		min-width: 18rem;
+	}
+}
+
+@media ( min-width : 768px) and (max-width: 1024px) {
+	.latestAccesseries {
+		overflow-x: auto;
+		display: flex;
+		gap: 30px;
+	}
+	.latestAccesseries .card {
+		min-width: 20rem;
+	}
+}
+
+@media ( min-width : 1024px) {
+	.latestAccesseries {
+		overflow-x: auto;
+		display: flex;
+		gap: 20px;
+	}
+	.latestAccesseries .card {
+		min-width: 25rem;
+	}
+}
+
+nav {
+	display: flex;
+	gap: 10px;
+	margin-bottom: 20px;
+}
+
+.btn {
+	padding: 10px 20px;
+	border: none;
+	cursor: pointer;
+	background-color: white;
+	color: black;
+	transition: background 0.3s ease, color 0.3s ease;
+}
+
+.btn.active {
+	background-color: black !important;
+	color: white !important;
+}
+
+section {
+	display: none; /* Hide sections by default */
+	padding: 20px;
+	border: 1px solid black;
+}
+
+section.active {
+	display: block; /* Show active section */
+}
+
+.card-footer {
+	background: none !important;
+	color: black !important;
+}
